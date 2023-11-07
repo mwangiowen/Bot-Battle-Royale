@@ -18,22 +18,22 @@ function BotsImage() {
 
   const handleCardClick = (bot) => {
     if (!selectedBots.some((b) => b.id === bot.id)) {
-      
       setSelectedBots([...selectedBots, bot]);
     }
   };
 
+  const handleDisplayedCardClick = (bot) => {
+    // Deselect the displayed card by removing it from the selectedBots array
+    setSelectedBots(selectedBots.filter((b) => b.id !== bot.id));
+  };
+
   const handleDischargeBot = (bot) => {
-    
     fetch(`http://localhost:8001/bots/${bot.id}`, {
       method: 'DELETE',
     })
       .then((res) => {
         if (res.status === 200) {
-          
           setBotsData(botsData.filter((b) => b.id !== bot.id));
-
-          
           setSelectedBots(selectedBots.filter((b) => b.id !== bot.id));
         } else {
           console.error('Failed to discharge the bot');
@@ -43,10 +43,10 @@ function BotsImage() {
 
   return (
     <div>
-      <SelectedBots selectedBots={selectedBots} handleDischargeBot={handleDischargeBot} />
+      <SelectedBots selectedBots={selectedBots} handleDischargeBot={handleDischargeBot} handleDisplayedCardClick={handleDisplayedCardClick} />
       <div className="card-container">
         {botsData.map((bot) => (
-          <BotCard key={bot.id} bot={bot} selectedBots={selectedBots} handleCardClick={handleCardClick} handleDischargeBot={handleDischargeBot} />
+          <BotCard key={bot.id} bot={bot} selectedBots={selectedBots} handleCardClick={handleCardClick} />
         ))}
       </div>
     </div>

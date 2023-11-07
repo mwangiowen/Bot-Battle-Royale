@@ -2,7 +2,7 @@ import React from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faHeart, faBolt, faShield } from '@fortawesome/free-solid-svg-icons';
 
-function SelectedBots({ selectedBots, handleDischargeBot }) {
+function SelectedBots({ selectedBots, handleDischargeBot, handleDisplayedCardClick }) {
   return (
     <div className="selected-cards-container">
       <div className="selected-cards" style={{ display: 'flex', flexDirection: 'row', flexWrap: 'wrap', gap: '20px' }}>
@@ -10,7 +10,11 @@ function SelectedBots({ selectedBots, handleDischargeBot }) {
           selectedBots.map((bot) => (
             <div key={bot.id} className="bot-details" style={{ margin: '20px' }}>
               <h2>{bot.name}</h2>
-              <img src={bot.avatar_url} alt={bot.name} />
+              <img
+                src={bot.avatar_url}
+                alt={bot.name}
+                onClick={() => handleDisplayedCardClick(bot)} // Add click handler to deselect
+              />
               <div style={{ display: 'flex', flexDirection: 'row', alignItems: 'center', gap: '10px' }}>
                 <p>
                   <FontAwesomeIcon icon={faHeart} /> Health: {bot.health}

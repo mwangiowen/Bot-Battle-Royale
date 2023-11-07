@@ -5,13 +5,7 @@ function BotCard({ bot, selectedBots, handleCardClick }) {
 
   const handleClick = () => {
     // Toggle the selection of the card
-    if (isSelected) {
-      // If the bot is already selected, deselect it
-      handleCardClick(bot, false);
-    } else {
-      // If the bot is not selected, select it
-      handleCardClick(bot, true);
-    }
+    handleCardClick(bot, isSelected);
   };
 
   return (
