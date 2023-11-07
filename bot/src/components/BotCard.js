@@ -4,7 +4,6 @@ function BotCard({ bot, selectedBots, handleCardClick }) {
   const isSelected = selectedBots.some((b) => b.id === bot.id);
 
   const handleClick = () => {
-    // Toggle the selection of the card
     handleCardClick(bot, isSelected);
   };
 

@@ -13,7 +13,7 @@ function SelectedBots({ selectedBots, handleDischargeBot, handleDisplayedCardCli
               <img
                 src={bot.avatar_url}
                 alt={bot.name}
-                onClick={() => handleDisplayedCardClick(bot)} // Add click handler to deselect
+                onClick={() => handleDisplayedCardClick(bot)} 
               />
               <div style={{ display: 'flex', flexDirection: 'row', alignItems: 'center', gap: '10px' }}>
                 <p>

@@ -23,7 +23,6 @@ function BotsImage() {
   };
 
   const handleDisplayedCardClick = (bot) => {
-    // Deselect the displayed card by removing it from the selectedBots array
     setSelectedBots(selectedBots.filter((b) => b.id !== bot.id));
   };
 
