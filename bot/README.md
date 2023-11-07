@@ -1,70 +1,59 @@
-# Getting Started with Create React App
+# BotsImage React App
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Welcome to the BotsImage React App, a powerful and stylish application that allows you to explore and interact with a fascinating array of robotic entities. Designed and developed by Owen Smith, this app offers a delightful user experience with a sleek interface and captivating bot images.
 
-## Available Scripts
+# BotsImage App
 
-In the project directory, you can run:
+- Bot 1:
+  ![Bot 1 Avatar](https://robohash.org/nostrumrepellendustenetur.png?size=300x300&set=set1)
 
-### `npm start`
+- Bot 2:
+  ![Bot 2 Avatar](https://robohash.org/quidemconsequaturaut.png?size=300x300&set=set1)
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+- Bot 3:
+  ![Bot 3 Avatar](https://robohash.org/idetcumque.png?size=300x300&set=set1)
+  
+# Features
+Display a list of bots with detailed information.
+Select and deselect bots to build your team.
+Discharge selected bots with ease.
+Enjoy a visually appealing and user-friendly interface.
+# Installation
+To get started and experience the BotsImage React App, follow these simple steps:
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+# Clone this repository to your local machine by using the following command:
+bash
+git clone <repository-url>
+# Navigate to the project folder:
+bash
+cd BotsImage
+# Install the project dependencies using either npm or yarn:
+Using npm:
+# bash
+npm install
+Or using yarn:
+# bash
+yarn install
+# Usage
+Once you've completed the installation, you can run the development server by executing the following command:
+# bash
+npm start
+# Alternatively, you can use yarn:
+# bash
+yarn start
 
-### `npm test`
+Now, open your web browser and go to http://localhost:8001 to explore the app.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+You'll find a list of intriguing bots, each with its unique set of characteristics. Click on a bot to select it, and click on a selected bot to deselect it. The selected bots are conveniently displayed in a separate section.
 
-### `npm run build`
+To remove a selected bot from your team, simply click the "X" button on the bot card within the selected bots section.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+Enjoy your journey with the BotsImage React App!
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+# Author
+This application was crafted by Owen Smith. You can find more of Owen's work on GitHub.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+Please note that the bot images are sourced from robohash.org, adding a visually appealing touch to the app.
 
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+# License
+This project is distributed under an open-source license, but please review the included license file for specific details. Feel free to contribute and enhance the BotsImage React App as you see fit.
