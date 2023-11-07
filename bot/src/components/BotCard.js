@@ -1,27 +1,29 @@
 import React from 'react';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faHeart, faBolt, faShield } from '@fortawesome/free-solid-svg-icons';
 
-function BotCard({ bot, selectedBots, handleCardClick, handleDischargeBot }) {
+function BotCard({ bot, selectedBots, handleCardClick }) {
+  const isSelected = selectedBots.some((b) => b.id === bot.id);
+
+  const handleClick = () => {
+    // Toggle the selection of the card
+    if (isSelected) {
+      // If the bot is already selected, deselect it
+      handleCardClick(bot, false);
+    } else {
+      // If the bot is not selected, select it
+      handleCardClick(bot, true);
+    }
+  };
+
   return (
     <div
-      className={`card ${selectedBots.some((b) => b.id === bot.id) ? 'selected' : ''}`}
-      onClick={() => handleCardClick(bot)}
+      className={`card ${isSelected ? 'selected' : ''}`}
+      onClick={handleClick}
     >
       <h2>{bot.name}</h2>
       <img src={bot.avatar_url} alt={bot.name} />
-      <p>
-        <FontAwesomeIcon icon={faHeart} /> Health: {bot.health}
-      </p>
-      <p>
-        <FontAwesomeIcon icon={faBolt} /> Damage: {bot.damage}
-      </p>
-      <p>
-        <FontAwesomeIcon icon={faShield} /> Armor: {bot.armor}
-      </p>
-      {selectedBots.some((b) => b.id === bot.id) && (
-        <button onClick={() => handleDischargeBot(bot)} className="discharge-button">X</button>
-      )}
+      <p>Health: {bot.health}</p>
+      <p>Damage: {bot.damage}</p>
+      <p>Armor: {bot.armor}</p>
     </div>
   );
 }
