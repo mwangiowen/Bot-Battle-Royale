@@ -18,22 +18,22 @@ function BotsImage() {
 
   const handleCardClick = (bot) => {
     if (!selectedBots.some((b) => b.id === bot.id)) {
-      // If the bot is not selected, add it
+      
       setSelectedBots([...selectedBots, bot]);
     }
   };
 
   const handleDischargeBot = (bot) => {
-    // Remove the bot from the backend and frontend
+    
     fetch(`http://localhost:8001/bots/${bot.id}`, {
       method: 'DELETE',
     })
       .then((res) => {
         if (res.status === 200) {
-          // Remove the bot from the botsData array
+          
           setBotsData(botsData.filter((b) => b.id !== bot.id));
 
-          // Remove the bot from the selectedBots array
+          
           setSelectedBots(selectedBots.filter((b) => b.id !== bot.id));
         } else {
           console.error('Failed to discharge the bot');
