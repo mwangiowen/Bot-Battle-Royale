@@ -51,7 +51,7 @@ To remove a selected bot from your team, simply click the "X" button on the bot 
 Enjoy your journey with the BotsImage React App!
 
 # Author
-This application was crafted by mwangiowen . You can find more of Owen's work on GitHub.
+This application was crafted by Owen Smith . You can find more of Owen's work on GitHub.
 
 Please note that the bot images are sourced from robohash.org, adding a visually appealing touch to the app.
 
